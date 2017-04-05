@@ -1,0 +1,41 @@
+// Constants
+$sans:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif
+$serif: 'Palatino Linotype', 'Georgia', serif
+$dark:  hsl(0, 0%, 10%)
+$light: hsl(0, 0%, 97%)
+
+// Bootstrap Overrides
+$font-family-sans-serif: $sans
+$font-family-serif: $serif
+
+$text-color: $dark
+$body-bg: $light
+
+$code-color: inherit
+$code-bg: darken($light, 10)
+
+$page-header-border-color: darken($light, 10)
+
+// Margins used throughout
+$tiny:    5px
+$small:  15px
+$medium: 30px
+$large:  45px
+
+// Import Bootstrap and Font Awesome
+@import 'sass/_bootstrap.scss'
+@import 'sass/_font-awesome.scss'
+
+// My styles
+body
+	margin: $large 0
+
+i
+	margin-right: $tiny
+
+code
+	cursor: pointer
+	user-select: none
+	&:active
+		background-color: $dark
+		color: $light

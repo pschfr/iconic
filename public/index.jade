@@ -1,0 +1,17 @@
+.container
+	.row
+		.col-xs-12
+			p.lead
+				strong Welcome to #{title}!
+				|  A one-stop shop for easy copy/pasting of all the 
+				abbr(title="HyperText Markup Language") HTML
+				|  needed for using these fonts in your webpages.
+			p.lead View the source on 
+				a(href="#{githubURL}" target="_blank" rel="noreferrer noopener") GitHub.
+			h1.page-header
+				a(href="http://fontawesome.io/" target="_blank" rel="noreferrer noopener") Font Awesome
+		each icon in icons['font-awesome']
+			.col-lg-3.col-md-4.col-sm-6.col-xs-12
+				p
+					i(class="fa fa-fw #{icon}" aria-hidden="true")
+					code(data-copy="<i class='fa #{icon}' aria-hidden='true'></i>") #{icon}
