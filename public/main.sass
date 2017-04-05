@@ -7,6 +7,15 @@ $light: hsl(0, 0%, 97%)
 // Bootstrap Overrides
 $font-family-sans-serif: $sans
 $font-family-serif: $serif
+$font-size-base: 18px
+
+$container-large-desktop: 1500px
+$container-desktop: 1200px
+$container-tablet: 900px
+
+$screen-lg-min: $container-large-desktop + 30
+$screen-md-min: $container-desktop + 30
+$screen-sm-min: $container-tablet + 30
 
 $text-color: $dark
 $body-bg: $light
@@ -14,7 +23,8 @@ $body-bg: $light
 $code-color: inherit
 $code-bg: darken($light, 10)
 
-$page-header-border-color: darken($light, 10)
+$page-header-border-color: darken($light, 20)
+$abbr-border-color: darken($light, 20)
 
 // Margins used throughout
 $tiny:    5px
@@ -32,10 +42,12 @@ body
 
 i
 	margin-right: $tiny
+	vertical-align: middle
 
 code
 	cursor: pointer
 	user-select: none
+	transition: all .1s
 	&:active
 		background-color: $dark
 		color: $light
