@@ -14,8 +14,6 @@ for icon in document.getElementsByTagName('code')
 		document.execCommand('copy')
 		# remove temp element from DOM
 		document.body.removeChild(tmp)
-		# Log that it was copied
-		console.log(event.target.innerHTML + ' copied')
 	)
 
 # Open/close panel when clicking arrow
@@ -27,3 +25,6 @@ toggleSection = (event) ->
 		event.path[3].classList.add('closed')
 		event.target.innerHTML = 'unfold_more'
 
+# if URL has ID, open that panel
+if window.location.hash
+	document.getElementById(window.location.hash.replace('#', '')).classList.remove('closed')

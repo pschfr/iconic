@@ -3,6 +3,7 @@ $sans:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
 $serif: 'Palatino Linotype', 'Georgia', serif
 $dark:  hsl(0, 0%, 10%)
 $light: hsl(0, 0%, 97%)
+$icon: 24px
 
 // Bootstrap Overrides
 $font-family-sans-serif: $sans
@@ -23,6 +24,8 @@ $body-bg: $light
 $code-color: inherit
 $code-bg: darken($light, 10)
 
+$panel-default-heading-bg: darken($light, 10)
+
 // Margins used throughout
 $tiny:    5px
 $small:  15px
@@ -42,6 +45,8 @@ body
 i
 	margin-right: $tiny
 	vertical-align: middle
+	font-size: $icon
+	width: $icon
 
 code
 	cursor: pointer
@@ -52,9 +57,13 @@ code
 		color: $light
 
 .panel
+	box-shadow: none
 	i[onclick]
 		margin-right: 0
 		cursor: pointer
 		user-select: none
-	&.closed .panel-body
-		display: none
+	&.closed
+		.panel-heading
+			border-bottom: none
+		.panel-body
+			display: none
