@@ -5,7 +5,7 @@
 				strong Welcome to #{title}!
 				|  A one-stop shop for easy copy/pasting of all the 
 				abbr(title="HyperText Markup Language" class="initialism") HTML
-				|  needed for using these fonts in your webpages. Just click, and BAM! Right in your clipboard.
+				|  needed for using these fonts in your webpages. Just click, and bam! Right in your clipboard.
 			p.lead View the source on 
 				a(href="#{githubURL}" target="_blank" rel="noreferrer noopener") GitHub.
 			.panel.panel-default#font-awesome
@@ -28,7 +28,7 @@
 						a(href="#material-icons") Material Icons
 						| 
 						small
-							a(href="https://github.com/google/material-design-icons" target="_blank" rel="noreferrer noopener") 3.0.1
+							a(href="https://material.io/icons/" target="_blank" rel="noreferrer noopener") 3.0.1
 						i(onclick="javascript:toggleSection(event)" class="material-icons pull-right text-right" aria-hidden="true") unfold_less
 				.panel-body.row.icons
 					each icon in icons['material-design']
@@ -36,3 +36,17 @@
 							p
 								i(class="material-icons") #{icon}
 								code(data-copy="<i class=\"material-icons\">#{icon}</i>") #{icon}
+			.panel.panel-default#ionicons
+				.panel-heading
+					h1.panel-title
+						a(href="#ionicons") Ionicons
+						| 
+						small
+							a(href="http://ionicons.com/" target="_blank" rel="noreferrer noopener") 2.0.1
+						i(onclick="javascript:toggleSection(event)" class="material-icons pull-right text-right" aria-hidden="true") unfold_less
+				.panel-body.row.icons
+					each icon in icons['ionicons']
+						.col-md-3.col-sm-4.col-xs-6
+							p
+								i(class="ion ion-#{icon}" aria-hidden="true")
+								code(data-copy="<i class=\"ion ion-#{icon}\" aria-hidden=\"true\"></i>") #{icon}
