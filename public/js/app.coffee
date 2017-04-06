@@ -17,3 +17,13 @@ for icon in document.getElementsByTagName('code')
 		# Log that it was copied
 		console.log(event.target.innerHTML + ' copied')
 	)
+
+# Open/close panel when clicking arrow
+toggleSection = (event) ->
+	if (event.path[3].classList.value.includes('closed'))
+		event.path[3].classList.remove('closed')
+		event.target.innerHTML = 'unfold_less'
+	else
+		event.path[3].classList.add('closed')
+		event.target.innerHTML = 'unfold_more'
+

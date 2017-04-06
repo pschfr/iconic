@@ -4,14 +4,35 @@
 			p.lead
 				strong Welcome to #{title}!
 				|  A one-stop shop for easy copy/pasting of all the 
-				abbr(title="HyperText Markup Language") HTML
+				abbr(title="HyperText Markup Language" class="initialism") HTML
 				|  needed for using these fonts in your webpages. Just click, and BAM! Right in your clipboard.
 			p.lead View the source on 
 				a(href="#{githubURL}" target="_blank" rel="noreferrer noopener") GitHub.
-			h1.page-header
-				a(href="http://fontawesome.io/" target="_blank" rel="noreferrer noopener") Font Awesome
-		each icon in icons['font-awesome']
-			.col-md-3.col-sm-4.col-xs-6
-				p
-					i(class="fa fa-fw #{icon}" aria-hidden="true")
-					code(data-copy="<i class=\"fa #{icon}\" aria-hidden=\"true\"></i>") #{icon}
+			.panel.panel-default#font-awesome
+				.panel-heading
+					h1.panel-title
+						a(href="#font-awesome") Font Awesome
+						| 
+						small
+							a(href="http://fontawesome.io/" target="_blank" rel="noreferrer noopener") 4.7.0
+						i(onclick="javascript:toggleSection(event)" class="material-icons pull-right text-right" aria-hidden="true") unfold_less
+				.panel-body.row.icons
+					each icon in icons['font-awesome']
+						.col-md-3.col-sm-4.col-xs-6
+							p
+								i(class="fa fa-fw #{icon}" aria-hidden="true")
+								code(data-copy="<i class=\"fa #{icon}\" aria-hidden=\"true\"></i>") #{icon}
+			.panel.panel-default#material-icons
+				.panel-heading
+					h1.panel-title
+						a(href="#material-icons") Material Icons
+						| 
+						small
+							a(href="https://github.com/google/material-design-icons" target="_blank" rel="noreferrer noopener") 3.0.1
+						i(onclick="javascript:toggleSection(event)" class="material-icons pull-right text-right" aria-hidden="true") unfold_less
+				.panel-body.row.icons
+					each icon in icons['material-design']
+						.col-md-3.col-sm-4.col-xs-6
+							p
+								i(class="material-icons") #{icon}
+								code(data-copy="<i class=\"material-icons\">#{icon}</i>") #{icon}

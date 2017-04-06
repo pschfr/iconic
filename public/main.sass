@@ -23,9 +23,6 @@ $body-bg: $light
 $code-color: inherit
 $code-bg: darken($light, 10)
 
-$page-header-border-color: darken($light, 20)
-$abbr-border-color: darken($light, 20)
-
 // Margins used throughout
 $tiny:    5px
 $small:  15px
@@ -35,6 +32,7 @@ $large:  45px
 // Import Bootstrap and Font Awesome
 @import 'sass/_bootstrap.scss'
 @import 'sass/_font-awesome.scss'
+@import 'sass/_material-icons.scss'
 
 // My styles
 body
@@ -51,3 +49,11 @@ code
 	&:active
 		background-color: $dark
 		color: $light
+
+.panel
+	i[onclick]
+		margin-right: 0
+		cursor: pointer
+		user-select: none
+	&.closed .panel-body
+		display: none
