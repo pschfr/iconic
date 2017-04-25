@@ -18,11 +18,16 @@ for icon in document.getElementsByTagName('code')
 
 # Open/close panel when clicking arrow
 toggleSection = (event) ->
-	if (event.path[3].classList.value.includes('closed'))
-		event.path[3].classList.remove('closed')
+	path = []
+	node = event.target
+	while (node != document.body)
+		path.push(node)
+		node = node.parentNode
+	if (path[3].classList.value.includes('closed'))
+		path[3].classList.remove('closed')
 		event.target.innerHTML = 'unfold_less'
 	else
-		event.path[3].classList.add('closed')
+		path[3].classList.add('closed')
 		event.target.innerHTML = 'unfold_more'
 
 # if URL has ID, open that panel
