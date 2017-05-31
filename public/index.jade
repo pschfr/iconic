@@ -1,52 +1,49 @@
-.container
-	.row
-		.col-xs-12
-			p.lead
-				strong Welcome to #{title}!
-				|  A one-stop shop for easy copy/pasting of all the 
-				abbr(title="HyperText Markup Language" class="initialism") HTML
-				|  needed for using these fonts in your webpages. Just click, and bam! Right in your clipboard.
-			p.lead View the source on 
-				a(href="#{githubURL}" target="_blank" rel="noreferrer noopener") GitHub.
-			.panel.panel-default.closed#font-awesome
-				.panel-heading
-					h1.panel-title
-						a(href="#font-awesome") Font Awesome
-						| 
-						small
-							a(href="http://fontawesome.io/" target="_blank" rel="noreferrer noopener") 4.7.0
-						i(onclick="javascript:toggleSection(event)" class="material-icons pull-right text-right" aria-hidden="true") unfold_more
-				.panel-body.row.icons
-					each icon in icons['font-awesome']
-						.col-md-3.col-sm-4.col-xs-6
-							p
-								i(class="fa fa-fw #{icon}" aria-hidden="true")
-								code(data-copy="<i class=\"fa #{icon}\" aria-hidden=\"true\"></i>") #{icon}
-			.panel.panel-default.closed#material-icons
-				.panel-heading
-					h1.panel-title
-						a(href="#material-icons") Material Icons
-						| 
-						small
-							a(href="https://material.io/icons/" target="_blank" rel="noreferrer noopener") 3.0.1
-						i(onclick="javascript:toggleSection(event)" class="material-icons pull-right text-right" aria-hidden="true") unfold_more
-				.panel-body.row.icons
-					each icon in icons['material-design']
-						.col-md-3.col-sm-4.col-xs-6
-							p
-								i(class="material-icons") #{icon}
-								code(data-copy="<i class=\"material-icons\">#{icon}</i>") #{icon}
-			.panel.panel-default.closed#ionicons
-				.panel-heading
-					h1.panel-title
-						a(href="#ionicons") Ionicons
-						| 
-						small
-							a(href="http://ionicons.com/" target="_blank" rel="noreferrer noopener") 2.0.1
-						i(onclick="javascript:toggleSection(event)" class="material-icons pull-right text-right" aria-hidden="true") unfold_more
-				.panel-body.row.icons
-					each icon in icons['ionicons']
-						.col-md-3.col-sm-4.col-xs-6
-							p
-								i(class="ion ion-#{icon}" aria-hidden="true")
-								code(data-copy="<i class=\"ion ion-#{icon}\" aria-hidden=\"true\"></i>") #{icon}
+p.lead
+	strong Welcome to #{title}!
+	|  A one-stop shop for easy copy/pasting of all the 
+	abbr(title="HyperText Markup Language" class="initialism") HTML
+	|  needed for using these fonts in your webpages. Just click, and bam! Right in your clipboard.
+p.lead View the source on 
+	a(href="#{githubURL}" target="_blank" rel="noreferrer noopener") GitHub.
+.panel.panel-default.closed#font-awesome
+	.panel-heading
+		h1.panel-title
+			a(href="#font-awesome") Font Awesome
+			| 
+			small
+				a(href="http://fontawesome.io/" target="_blank" rel="noreferrer noopener") 4.7.0
+			i(onclick="javascript:toggleSection(event)" class="material-icons pull-right text-right" aria-hidden="true") unfold_more
+	.panel-body.row.icons
+		each icon in icons['font-awesome']
+			.col-md-3.col-sm-4.col-xs-6
+				p
+					i(class="fa fa-fw #{icon}" aria-hidden="true")
+					code(data-copy="<i class=\"fa #{icon}\" aria-hidden=\"true\"></i>") #{icon}
+.panel.panel-default.closed#material-icons
+	.panel-heading
+		h1.panel-title
+			a(href="#material-icons") Material Icons
+			| 
+			small
+				a(href="https://material.io/icons/" target="_blank" rel="noreferrer noopener") 3.0.1
+			i(onclick="javascript:toggleSection(event)" class="material-icons pull-right text-right" aria-hidden="true") unfold_more
+	.panel-body.row.icons
+		each icon in icons['material-design']
+			.col-md-3.col-sm-4.col-xs-6
+				p
+					i(class="material-icons") #{icon}
+					code(data-copy="<i class=\"material-icons\">#{icon}</i>") #{icon}
+.panel.panel-default.closed#ionicons
+	.panel-heading
+		h1.panel-title
+			a(href="#ionicons") Ionicons
+			| 
+			small
+				a(href="http://ionicons.com/" target="_blank" rel="noreferrer noopener") 2.0.1
+			i(onclick="javascript:toggleSection(event)" class="material-icons pull-right text-right" aria-hidden="true") unfold_more
+	.panel-body.row.icons
+		each icon in icons['ionicons']
+			.col-md-3.col-sm-4.col-xs-6
+				p
+					i(class="ion ion-#{icon}" aria-hidden="true")
+					code(data-copy="<i class=\"ion ion-#{icon}\" aria-hidden=\"true\"></i>") #{icon}
