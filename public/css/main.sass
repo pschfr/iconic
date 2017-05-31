@@ -47,12 +47,25 @@ i
 	width: $icon
 
 code
+	position: relative
 	cursor: pointer
 	user-select: none
-	transition: all .1s
+	transition: all .25s
+	&:after
+		content: 'Copied!'
+		position: absolute
+		top: -135%
+		left: 0
+		background-color: inherit
+		padding: inherit
+		color: inherit
+		border-radius: inherit
+		display: none
 	&:active
 		background-color: $dark
 		color: $light
+		&:after
+			display: block
 
 abbr
 	text-decoration: none
